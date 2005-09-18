@@ -7,8 +7,9 @@
   ============================================================================*/
 
 #include <boost/test/auto_unit_test.hpp>
-#include "../lognumber.hpp"
-#include "../logmath_io.hpp"
+
+#include <machina/lognumber.hpp>
+#include <machina/logmath_io.hpp>
 
 #define MACHINA_LOGNUMBER_CHECK_CLOSE(A,B,C)                   \
 BOOST_CHECK_PREDICATE(std::less<lognumber>(),((A) - (B)) (C)); \

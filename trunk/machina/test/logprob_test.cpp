@@ -7,8 +7,9 @@
   ============================================================================*/
 
 #include <boost/test/auto_unit_test.hpp>
-#include "../logprob.hpp"
-#include "../logmath_io.hpp"
+
+#include <machina/logprob.hpp>
+#include <machina/logmath_io.hpp>
 
 BOOST_AUTO_UNIT_TEST(test_machina_logprob)
 {

@@ -23,5 +23,6 @@ unit-test     machina_tests : logprob_test.cpp
                               tests.cpp
                               finite_sa_test.cpp 
                               expression_test.cpp
-                              boost_unit_test_framework ;
+                              boost_unit_test_framework 
+                            : <include>../include ;
                               

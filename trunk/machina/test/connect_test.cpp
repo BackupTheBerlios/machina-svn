@@ -7,10 +7,11 @@
   ============================================================================*/
 
 #include <boost/test/auto_unit_test.hpp>
-#include "../runtime_finite_sm.hpp"
-#include "../graphviz.hpp"
 #include <iostream>
-#include "../logmath_io.hpp"
+
+#include <machina/finite_sa.hpp>
+#include <machina/graphviz.hpp>
+#include <machina/logmath_io.hpp>
 
 using namespace std;
 using namespace machina;

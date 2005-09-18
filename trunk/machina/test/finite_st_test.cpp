@@ -7,8 +7,9 @@
   ============================================================================*/
 
 #include <boost/test/auto_unit_test.hpp>
-#include "../finite_st.hpp"
-#include "../logmath_io.hpp"
+
+#include <machina/finite_st.hpp>
+#include <machina/logmath_io.hpp>
 
 BOOST_AUTO_UNIT_TEST(test_machina_runtime_finite_st)
 {

@@ -1,25 +1,16 @@
 project machina ;
 
-#import install ;
-
 import package ;
-
-local directories = ../machina ../machina/expression ../machina/impl ;
-local patterns    = *.hpp *.ipp ;
-
-# install install
-#         : [ glob $(directories)/$(patterns) ]
-#         : /usr/local/include  
-#         ;
 
 build-project test ;
 
-package.install install : <install-source-root>.. # no requirements yet
+local directories = include/machina include/machina/* include/machina/*/* ;
+local pattern     = *.hpp *.ipp ;
+
+# echo [ glob $(directories)/$(files) ] ;
+
+package.install install : <install-source-root>include
                         : # no binaries yet
                         : # no libs yet
-                        : [ glob $(directories)/$(patterns) ] ;
+                        : [ glob $(directories)/$(pattern) ] ;
 
-# install install_headers : [ glob $(directories)/$(patterns) ]
-#                         : <location> ;
-#                       
-# install install : install_headers ;

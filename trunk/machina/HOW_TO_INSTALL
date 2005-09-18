@@ -1,0 +1,3 @@
+To install machina, you need a working installation of Boost.Build version 2
+
+run "sudo bjam install"
