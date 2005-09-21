@@ -22,9 +22,9 @@ BOOST_AUTO_UNIT_TEST(test_machina_runtime_finite_st)
     
     // very cumbersome way of writing
     // sm = "foo" >> "bar";
-    typedef state_machine_traits<SM>::state state;
-    typedef state_machine_traits<SM>::transition_iterator trans_itr;
-    typedef state_machine_traits<SM>::transition_iterator_pair trans_itr_pair;
+    typedef state_machine_traits<ST>::state state;
+    typedef state_machine_traits<ST>::transition_iterator trans_itr;
+    typedef state_machine_traits<ST>::transition_iterator_pair trans_itr_pair;
     state s0 = start_state(sm);
     state s1 = add_state(sm);
     state s2 = add_state(sm,true);
@@ -41,6 +41,9 @@ BOOST_AUTO_UNIT_TEST(test_machina_runtime_finite_st)
     p = transitions(sm, s1);
     trans_itr trans_to_s2 = p.first;
     BOOST_CHECK_EQUAL( string("bar"),     get_input(sm, *trans_to_s2) );
+    BOOST_CHECK_EQUAL( 1.0, get_weight(sm,*trans_to_s2));
+    BOOST_CHECK_EQUAL( state_machine_traits<ST>::output_epsilon()
+                     , get_output(sm,*trans_to_s2) );
     BOOST_CHECK_EQUAL( s2   ,     to(sm, *trans_to_s2 ) );
     BOOST_CHECK( ++p.first == p.second );
     BOOST_CHECK_EQUAL( true ,     is_final(sm, s2) );

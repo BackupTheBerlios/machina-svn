@@ -32,6 +32,10 @@ public:
     typedef trans_info* transition;
     
     typedef acceptor_tag machine_class;
+    enum f {finite_state = true};
+    enum m {modifiable = true};
+    enum t {transition_modifiable = false};
+    enum i {invertible = false};
 private:
     ////////////////////////////////////////////////////////////////////////////
     class trans_info {    

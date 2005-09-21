@@ -35,13 +35,8 @@ template <> struct is_transducer_tag<transducer_tag> {
     enum { value = true }; 
 };
 
-template <typename SM> struct is_acceptor {
-    enum { value = is_acceptor_tag<typename SM::machine_class>::value };
-};
-
-template <typename SM> struct is_transducer {
-    enum { value = is_transducer_tag<typename SM::machine_class>::value };
-};
+template <class T, class S = void> 
+struct enable_if_defined { typedef S type; };
 
 }; // namespace machina
 

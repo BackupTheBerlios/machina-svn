@@ -35,6 +35,10 @@ public:
     typedef trans_info* transition;
     
     typedef transducer_tag machine_class;
+    enum f {finite_state = true};
+    enum m {modifiable = true};
+    enum t {transition_modifiable = false};
+    enum i {invertible = true};
 private:
     ////////////////////////////////////////////////////////////////////////////
     class trans_info {    

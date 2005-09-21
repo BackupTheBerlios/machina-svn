@@ -12,19 +12,21 @@
 #include <boost/tuple/tuple_io.hpp>
 #include <boost/tuple/tuple_comparison.hpp>
 #include <boost/utility.hpp>
-#include "tags.hpp"
+//#include "tags.hpp"
+#include <machina/state_machine_traits.hpp>
 
 namespace machina
 {
 
-template < typename SM, typename Enable = void >
-struct state_machine_traits {};
+//template < typename SM, typename Enable = void >
+//struct state_machine_traits {};
 
 ////////////////////////////////////////////////////////////////////////////////
 ///
 /// default traits for an state machine acceptor
 ///
 ////////////////////////////////////////////////////////////////////////////////
+/*
 template < typename SM >
 struct state_machine_traits< SM,
                              typename boost::enable_if<is_acceptor<SM> >::type >
@@ -89,7 +91,7 @@ struct state_machine_traits<SM,
     static  token_type epsilon()
             { return token_type(input_epsilon(),output_epsilon()); }
 };
-
+*/
 ////////////////////////////////////////////////////////////////////////////////  
 
 template < typename SM >
